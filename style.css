@@ -9,8 +9,46 @@ body {
   background-position: top;
   font-family: Arial, Helvetica, sans-serif;
 }
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+aside h1 {
+  font-size: 33px;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+}
+aside span {
+  color: rgb(226, 148, 3);
+  font-size: 45px;
+}
+aside p {
+  color: white;
+  font-size: 20px;
+  line-height: 25px;
+  font-size: 19px;
+  text-align: center;
+}
+aside button {
+  font-size: 17px;
+  width: 150px;
+  padding: 10px;
+  background-color: rgb(226, 148, 3);
+  border: none;
+  border-radius: 10px;
+}
 form {
-  background-color: rgba(0, 0, 0, 0.712);
+  background-color: rgba(0, 0, 0, 0.842);
   display: flex;
   flex-direction: column;
   color: white;
@@ -59,10 +97,10 @@ form button {
   color: black;
   font-size: 18px;
 }
-.account{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 form a {
   text-decoration: none;
@@ -78,4 +116,64 @@ form a {
 }
 .facebook {
   width: 22px;
+}
+
+@media (min-width: 1366px) {
+  section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+    justify-items: center;
+  }
+  aside {
+    width: 45%;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  aside h1 {
+    font-size: 50px;
+    text-align: left;
+    width: 60%;
+  }
+  aside span {
+    font-size: 55px;
+  }
+  aside p {
+    text-align: left;
+    line-height: 30px;
+  }
+  section button {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 800px) and (min-width: 1280px) {
+  section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+    justify-items: center;
+  }
+  aside {
+    width: 45%;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  aside h1 {
+    font-size: 50px;
+    text-align: left;
+    width: 60%;
+  }
+  aside span {
+    font-size: 55px;
+  }
+  aside p {
+    text-align: left;
+    line-height: 30px;
+  }
+  section button {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
