@@ -3,12 +3,52 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-image: url(./assets/Background\ of\ praRoz.png);
   background-repeat: no-repeat;
   background-position: top;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  color: white;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo h1 {
+  color: #e29403;
+}
+
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: white;
+}
+
+.desktop-navbar,
+.search-bar {
+  display: none;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -92,7 +132,7 @@ form button {
   width: 100%;
   padding: 8px 0;
   border-radius: 6px;
-  background-color: rgb(226, 148, 3);
+  background-color: #e29403;
   border: none;
   color: black;
   font-size: 18px;
@@ -116,6 +156,74 @@ form a {
 }
 .facebook {
   width: 22px;
+}
+
+/* DESKTOP STYLES */
+
+/* HEADER */
+@media screen and (min-width: 1100px) {
+  header {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    flex: 0;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  .desktop-navbar,
+  .search-bar {
+    display: block;
+  }
+
+  .search-bar {
+    display: flex;
+    border: 1px solid #e29403;
+    border-radius: 3px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    background-color: transparent;
+    height: 30px;
+    padding: 1rem;
+  }
+
+  .search-bar input::placeholder {
+    color: grey;
+  }
+
+  .search-bar button {
+    background-color: #e29403;
+    color: white;
+    width: 130px;
+    border: none;
+    text-transform: capitalize;
+    font-size: 17px;
+  }
+
+  .desktop-navbar {
+    flex: 1;
+    margin: 0 1rem;
+  }
+
+  .desktop-navbar ul {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    text-transform: uppercase;
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 1366px) {
